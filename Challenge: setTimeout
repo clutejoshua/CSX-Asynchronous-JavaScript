@@ -1,0 +1,4 @@
+console.log('I am at the beginning of the code');
+// ...your code below
+
+setTimeout(function(){console.log('I am in the setTimeout callback function')}, 600)

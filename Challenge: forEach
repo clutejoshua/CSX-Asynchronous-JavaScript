@@ -1,0 +1,13 @@
+const forEach = (arr, cb) => {
+  arr.forEach((el, index) => {
+    cb(el, index);
+  })
+}
+
+let delays = [200, 500, 0, 350];
+
+const delayLog = (delayTime, i) => {
+  setTimeout(function(){console.log(`printing element ${i}`)}, delays[i]);
+}
+
+forEach(delays, delayLog);

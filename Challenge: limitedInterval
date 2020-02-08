@@ -1,0 +1,15 @@
+const limitedInterval = (callback, wait, limit) => {
+  let times = 1;
+  
+  const timer = setInterval(function(){
+    callback();
+    times++;
+    if (times >= limit/wait)
+    {
+      clearInterval(timer); //this solution works because its used in an asynchronous method call, outside of the interval, it should not work
+    }
+  },wait);
+}
+
+// /* Uncomment the following line and click 'run' to test your work */
+limitedInterval(() => console.log('repeating'), 100, 550); // should log 'repeating' once per 100 ms, five times.
